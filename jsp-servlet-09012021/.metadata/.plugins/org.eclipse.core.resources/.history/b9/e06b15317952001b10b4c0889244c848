@@ -1,0 +1,7 @@
+package com.laptrinhjavaweb.repository.impl;
+
+import com.laptrinhjavaweb.repository.JpaRepository;
+
+public class SimpleJpaRepository<T> implements JpaRepository<T> {
+
+}

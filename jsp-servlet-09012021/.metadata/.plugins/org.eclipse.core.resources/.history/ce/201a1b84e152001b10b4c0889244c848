@@ -1,0 +1,34 @@
+package com.laptrinhjavaweb.mapper;
+
+import java.lang.reflect.Field;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.laptrinhjavaweb.annotation.Entity;
+
+public class ResultSetMapper<T> {
+	//Tra ve list<T>
+	public List<T> mapRow(ResultSet rs, Class<T> zClass){
+		List<T> results = new ArrayList<T>();
+		try {
+			if(zClass.isAnnotationPresent(Entity.class) && zClass.isAnnotationPresent(Entity.class)) {
+				ResultSetMetaData resultSetMetaData = rs.getMetaData();//ResultSetMetaData de get gtri trong Entity
+				Field[] fields = zClass.getDeclaredFields(); //co tat ca field khi put BuildingEntity
+				//Chay vong lap de get tung field, get name cua field do
+				while(rs.next()) {
+					T object = zClass.newInstance();
+					for(int i = 0 ; i < resultSetMetaData.getColumnCount(); i++) { //getColumnCount: chay tung column
+						String columnName = resultSetMetaData.getColumnName(i + 1);
+						Object columnValue = rs.getObject(i + 1) ; //Object: KDL chua xac dinh, do cho biet value tra ve gtri String hay int
+					}
+				}
+			}
+		} catch (Exception e) {
+			System.out.println(e.getMessage()); // Chá»‰ in ra trÃªn eclipse , netbean chá»© k in ra trÃªn server tháº­t	
+		}
+		
+		return results;
+	}
+}

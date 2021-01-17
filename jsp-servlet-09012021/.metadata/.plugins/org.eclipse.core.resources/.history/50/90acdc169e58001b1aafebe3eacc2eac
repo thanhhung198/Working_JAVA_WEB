@@ -1,0 +1,36 @@
+package com.laptrinhjavaweb.controller;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.laptrinhjavaweb.builder.BuildingSearchBuilder;
+import com.laptrinhjavaweb.dto.BuildingDTO;
+import com.laptrinhjavaweb.repository.IBuildingRepository;
+import com.laptrinhjavaweb.service.IBuildingService;
+import com.laptrinhjavaweb.service.impl.BuildingService;
+
+public class BuildingController {
+	public static void main(String[] args) {
+		/*
+		 * IBuildingService buildingService = new BuildingService(); try {
+		 * buildingService.test(); } catch (Exception e) { System.out.print(e); }
+		 */
+		int page = 1;
+		int limit  = 2;
+		int offset = (page - 1) * limit;
+		int name = "tower";
+		int district = "";
+		Integer buildingArea = 650;
+		Integer numberOfBasement = 2;
+		IBuildingService buildingService = new BuildingService();
+		BuildingSearchBuilder buildingSearchBuilder = new BuildingSearchBuilder.Builder().setName(name).setDistrict(district)
+														.setNumberOfBasement(numberOfBasement).setBuildingArea(buildingArea)
+														.build();
+		
+		List<BuildingDTO> buildings = buildingService.findAll(buildingSearchBuilder, offset, limit);
+		for(BuildingDTO item: buildings) {
+			System.out.println("ID: " +item.getId()+"- Name: "+ item.getName() + "- Adress: "+item.getStreet()+ "- BuildingArea: " +item.getBuildingArea());
+		}
+	}
+}

@@ -1,0 +1,16 @@
+package com.laptrinhjavaweb.repository.impl;
+
+import java.util.List;
+
+import com.laptrinhjavaweb.dto.BuildingDTO;
+import com.laptrinhjavaweb.repository.IBuildingRepository;
+
+public class BuildingRepository implements IBuildingRepository {
+
+	@Override
+	public List<BuildingDTO> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

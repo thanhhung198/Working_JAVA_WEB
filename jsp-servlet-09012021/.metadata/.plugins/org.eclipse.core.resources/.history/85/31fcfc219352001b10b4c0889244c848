@@ -1,0 +1,7 @@
+package com.laptrinhjavaweb.annotation;
+
+@Retention
+@Target({ElementType.TYPE})
+public interface Table {
+
+}

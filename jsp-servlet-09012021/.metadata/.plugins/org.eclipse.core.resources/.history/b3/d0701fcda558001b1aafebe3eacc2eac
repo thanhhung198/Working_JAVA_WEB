@@ -1,0 +1,76 @@
+package com.laptrinhjavaweb.repository.impl;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.commons.lang.StringUtils;
+
+import com.laptrinhjavaweb.dto.BuildingDTO;
+import com.laptrinhjavaweb.entity.BuildingEntity;
+import com.laptrinhjavaweb.paging.Pageable;
+import com.laptrinhjavaweb.repository.IBuildingRepository;
+
+public class BuildingRepository extends SimpleJpaRepository<BuildingEntity> implements IBuildingRepository {
+	
+	@Override
+	public List<BuildingEntity> findAll(Map<String, Object> params, Pageable pageable) {
+		String name = (String) params.get("name");
+		String district = (String) params.get("district");
+		/*
+		 * Integer buildingArea = (Integer) params.get("buildingArea"); Integer
+		 * numberOfBasement = (Integer) params.get("numberOfBasement");
+		 */
+		
+		/*//student code
+		 * StringBuilder where = new StringBuilder(""); if(StringUtils.isNotBlank(name))
+		 * { where.append("AND A.name LIKE '%"+name+"%' "); }
+		 * if(StringUtils.isNotBlank(district)) {
+		 * where.append("AND A.district LIKE '%"+district+"%' "); }
+		 * if(params.get("buildingArea") != null) { Integer buildingArea = (Integer)
+		 * params.get("buildingArea");
+		 * where.append("AND A.buildingarea = "+buildingArea+" "); }
+		 * if(params.get("numberOfBasement") != null) {//check Object Integer
+		 * numberOfBasement = (Integer) params.get("numberOfBasement");
+		 * where.append("AND A.numberofbasement = "+numberOfBasement+" "); }
+		 */
+		
+		/*2 year exp*/		
+		//Tao mang de luu tru
+		if(params != null && params.size() > 0) {
+			String[] keys = new String[params.size()];
+			Object[] values = new Object[params.size()];
+			int i = 0;
+			for(Map.Entry<String, Object> item: params.entrySet()){
+				keys[i] = item.getKey();
+				values[i] = item.getValue();
+				i++;
+			}
+		}
+		return this.findAll(pageable, where.toString());
+	}
+
+	/*
+	 * @Override public List<BuildingDTO> findAll() { List<BuildingDTO> results =
+	 * new ArrayList<>(); String sql = "Select * from building "; Connection
+	 * connection = null; PreparedStatement statement = null; ResultSet resultSet =
+	 * null; try { connection = EntityManagerFactory.getConnection(); statement =
+	 * connection.prepareStatement(sql); resultSet = statement.executeQuery();
+	 * while(resultSet.next()) { BuildingDTO buildingDTO = new BuildingDTO();
+	 * buildingDTO.setName(resultSet.getString("name"));//get theo ten cot trong DB
+	 * buildingDTO.setStreet(resultSet.getString("street"));
+	 * results.add(buildingDTO); } return results; } catch (SQLException e) { return
+	 * null; } finally { try { if(connection != null) { connection.close(); }
+	 * if(statement != null) { connection.close(); } if(resultSet != null) {
+	 * connection.close(); } } catch (SQLException e) { return null; }
+	 * 
+	 * }
+	 * 
+	 * }
+	 */
+
+}

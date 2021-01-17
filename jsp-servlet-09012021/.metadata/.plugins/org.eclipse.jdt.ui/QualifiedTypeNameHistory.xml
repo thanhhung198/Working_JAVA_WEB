@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.util.ResourceBundle"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="com.laptrinhjavaweb.repository.impl.EntityManagerFactory"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="com.laptrinhjavaweb.repository.impl.BuildingRepository"/>
+<fullyQualifiedTypeName name="com.laptrinhjavaweb.repository.IBuildingRepository"/>
+<fullyQualifiedTypeName name="com.laptrinhjavaweb.service.IBuildingService"/>
+<fullyQualifiedTypeName name="com.laptrinhjavaweb.service.impl.BuildingService"/>
+<fullyQualifiedTypeName name="com.laptrinhjavaweb.repository.JpaRepository"/>
+<fullyQualifiedTypeName name="com.laptrinhjavaweb.dto.UserDTO"/>
+<fullyQualifiedTypeName name="java.lang.annotation.Retention"/>
+<fullyQualifiedTypeName name="java.lang.annotation.Target"/>
+<fullyQualifiedTypeName name="java.lang.annotation.RetentionPolicy"/>
+<fullyQualifiedTypeName name="java.lang.annotation.ElementType"/>
+<fullyQualifiedTypeName name="java.lang.reflect.ParameterizedType"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Type"/>
+<fullyQualifiedTypeName name="com.laptrinhjavaweb.annotation.Table"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="com.laptrinhjavaweb.annotation.Entity"/>
+<fullyQualifiedTypeName name="java.sql.ResultSetMetaData"/>
+<fullyQualifiedTypeName name="com.laptrinhjavaweb.annotation.Column"/>
+<fullyQualifiedTypeName name="org.apache.commons.beanutils.BeanUtils"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="com.laptrinhjavaweb.mapper.ResultSetMapper"/>
+<fullyQualifiedTypeName name="com.laptrinhjavaweb.repository.impl.SimpleJpaRepository"/>
+<fullyQualifiedTypeName name="org.modelmapper.ModelMapper"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.laptrinhjavaweb.entity.BuildingEntity"/>
+<fullyQualifiedTypeName name="com.laptrinhjavaweb.dto.BuildingDTO"/>
+<fullyQualifiedTypeName name="com.laptrinhjavaweb.converter.BuildingConverter"/>
+<fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Field"/>
+<fullyQualifiedTypeName name="java.lang.reflect.InvocationTargetException"/>
+<fullyQualifiedTypeName name="java.lang.IllegalAccessException"/>
+</qualifiedTypeNameHistroy>
